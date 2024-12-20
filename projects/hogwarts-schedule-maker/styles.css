@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&display=swap');
+
+@font-face {
+  font-family: Morris;
+  src: url(https://cdn.statically.io/gh/EmmesCodes/Tipografias/dae9f5bb/MorrisInitials.ttf);
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e6d2;
+    color: #2a2a2a;
+    background-image: url('/projects/hogwarts-schedule-maker/images/14.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    font-size: 18px;
+}
+
+.hogwarts-container {
+  position: relative;
+  width: 75%;
+  margin: 3em auto;
+  padding: 2em;
+  background-image: url(data:image/png;base64,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);
+}
+
+.hogwarts-container::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  z-index: -1;
+  background: rgba(255, 254, 240, 0.8);
+  filter: url(#wavy2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+}
+
+.hogwarts-container::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;  /* -15px에서 -5px로 위로 조정 */
+    right: 10px;   /* -15px에서 10px로 왼쪽으로 조정 */
+    width: 150px;
+    height: 150px;
+    background-image: url('https://i.postimg.cc/4NBYNqCR/22.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.9;
+  }
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: #740001;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#languageSelect {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #d3a625;
+    background-color: #2a2d34;
+    color: #d3a625;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hogwarts-button, .hogwarts-select {
+    background-color: #740001;
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hogwarts-button:hover, .hogwarts-select:hover {
+    background-color: #9c0002;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hogwarts-button:active {
+    transform: translateY(2px);
+}
+
+#resetButton {
+    background-color: #1a472a;
+}
+
+#undoButton, #redoButton {
+    background-color: #0e1a40;
+}
+
+#exportButton {
+    background-color: #5d5d5d;
+}
+
+.schedule-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2px;
+    margin-top: 30px;
+}
+
+th, td {
+    border: 1px solid #d3a625;
+    padding: 12px;
+    text-align: center;
+    font-size: 1em;
+    height: 100px;
+    width: 12.5%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    vertical-align: top;
+    transition: all 0.3s ease;
+}
+
+th {
+    background-color: rgba(116, 0, 1, 0.9);
+    color: #fff;
+    font-weight: bold;
+}
+
+td:first-child {
+    background-color: rgba(26, 71, 42, 0.9);
+    color: #fff;
+    font-weight: bold;
+    width: 60px;
+    height: auto;
+}
+
+.subject {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #2a2a2a;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    min-height: 20px;
+    
+}
+
+.subject:hover {
+    transform: scale(1.02);
+    z-index: 20;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subject-text, .time-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+}
+
+.parchment {
+    background-color: rgba(249, 243, 227, 0.8);
+    border: 1px solid #d3a625;
+    color: #2a2a2a;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+button:disabled {
+    background-color: #5d5d5d;
+    color: #a9a9a9;
+    cursor: not-allowed;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #d3a625;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #2a2d34;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin-top: 10px;
+    color: #2a2d34;
+}
+
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    margin-left: 10px;
+}
+
+#deleteButton {
+    background-color: #740001;
+}
+
+#cancelButton {
+    background-color: #5d5d5d;
+}
+
+.transcript-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#recognitionCheck {
+    color: #740001;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.voice-command-examples {
+    margin-top: 30px;
+    position: relative;
+    padding: 20px;
+    background-color: #f0e6d2;
+    border: 1px solid #d3a625;
+}
+
+.voice-command-examples::before,
+.voice-command-examples::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-color: var(--tape-gray);
+  opacity: 0.5;
+  border-right: 1px dotted var(--tape-edge-gray);
+  border-left: 1px dotted var(--tape-edge-gray);
+}
+
+.voice-command-examples::before {
+  top: -10px;
+  transform: rotate(-2deg);
+}
+
+.voice-command-examples::after {
+  bottom: -10px;
+  transform: rotate(2deg);
+}
+
+#voiceCommandExamplesTitle {
+  color: #8B0000;
+}
+
+.voice-command-examples h2 {
+    color: #2a2d34;
+    margin-bottom: 15px;
+}
+
+#voiceCommandList {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.voice-command-category {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #d3a625;
+    padding: 10px;
+}
+
+.voice-command-category h3 {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #d3a625;
+}
+
+.voice-command-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.voice-command-list li {
+    font-family: auto;
+    background-color: rgb(110 116 0 / 8%);;
+    border: 1px solid #d3a625;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #740001;
+}
+
+.voice-command-list li:hover {
+    background-color: rgba(116, 0, 1, 0.3);
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .hogwarts-button, .hogwarts-select {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+
+    .subject {
+        font-size: 10px;
+    }
+}
+
+#pageTitle {
+    font-family: 'Harry Potter', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #740001;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+@font-face {
+    font-family: 'Harry Potter';
+    src: url('https://fonts.cdnfonts.com/s/36376/HARRYP__.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

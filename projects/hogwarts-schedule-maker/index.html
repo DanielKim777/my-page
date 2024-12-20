@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hogwarts Schedule Maker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <svg style="display: none">
+      <filter id="wavy2">
+        <feTurbulence
+          x="0"
+          y="0"
+          baseFrequency="0.02"
+          numOctaves="5"
+          seed="1"
+        />
+        <feDisplacementMap in="SourceGraphic" scale="20" />
+      </filter>
+    </svg>
+    <div class="hogwarts-container">
+      <div class="language-selector">
+        <select id="languageSelect">
+          <option value="en">English</option>
+          <option value="ko">한국어</option>
+        </select>
+      </div>
+      <h1 id="pageTitle">HOGWARTS SCHEDULE MAKER</h1>
+      <div class="controls">
+        <button id="startButton" class="hogwarts-button">
+          Start Voice Recognition
+        </button>
+        <button id="resetButton" class="hogwarts-button">Reset Schedule</button>
+        <button id="undoButton" class="hogwarts-button">Undo</button>
+        <button id="redoButton" class="hogwarts-button">Redo</button>
+        <button id="exportButton" class="hogwarts-button">
+          Export as Image
+        </button>
+        <select id="fileFormatSelect" class="hogwarts-select">
+          <option value="png">PNG</option>
+
+          <option value="webp">WebP</option>
+        </select>
+      </div>
+      <p id="instructions" class="parchment">
+        Use voice commands to input your schedule. For example: "Monday 9 AM to
+        11 AM Potions"
+      </p>
+      <p id="status" class="parchment">Voice recognition ready...</p>
+      <div class="transcript-container parchment">
+        <p id="transcript"></p>
+        <span id="recognitionCheck" class="hidden">✨</span>
+      </div>
+      <p id="voiceFeedback" class="parchment" aria-live="polite"></p>
+      <div class="schedule-container">
+        <table id="scheduleTable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleBody">
+            <!-- Time rows will be dynamically generated in JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Voice Command Examples Section -->
+      <div id="voiceCommandExamples" class="voice-command-examples parchment">
+        <h2 id="voiceCommandExamplesTitle">Voice Command Examples</h2>
+        <div id="voiceCommandList">
+          <!-- Examples will be dynamically generated in JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="editModal" class="modal">
+      <div class="modal-content parchment">
+        <h2 id="editModalTitle">Edit Schedule</h2>
+        <form id="editForm">
+          <label for="editSubject" id="editSubjectLabel">Subject:</label>
+          <input type="text" id="editSubject" required class="hogwarts-input" />
+
+          <label for="editDay" id="editDayLabel">Day:</label>
+          <select id="editDay" required class="hogwarts-select">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+
+          <label for="editStartTime" id="editStartTimeLabel">Start Time:</label>
+          <input
+            type="time"
+            id="editStartTime"
+            required
+            class="hogwarts-input"
+          />
+
+          <label for="editEndTime" id="editEndTimeLabel">End Time:</label>
+          <input type="time" id="editEndTime" required class="hogwarts-input" />
+
+          <div class="modal-buttons">
+            <button type="submit" id="updateButton" class="hogwarts-button">
+              Update
+            </button>
+            <button type="button" id="deleteButton" class="hogwarts-button">
+              Delete
+            </button>
+            <button type="button" id="cancelButton" class="hogwarts-button">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
