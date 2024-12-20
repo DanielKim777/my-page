@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     category: "Edit Schedule",
                     commands: [
-                        "Edit Monday 9 AM Potions",
-                        "Delete Tuesday 2 PM Transfiguration"
+                        "Edit Monday Potions",
+                        "Delete Tuesday Transfiguration"
                     ]
                 },
                 {
@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     category: "스케줄 편집",
                     commands: [
-                        "월요일 오전 9시 마법약 수업 수정",
-                        "화요일 오후 2시 변신술 삭제"
+                        "월요일 마법약 수정",
+                        "화요일 변신술 삭제"
                     ]
                 },
                 {
